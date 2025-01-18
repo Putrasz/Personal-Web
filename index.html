@@ -1,148 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hafidh's Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 0.5rem 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .left-text {
-            color: white;
-            font-size: 1.2rem;
-        }
-        nav .links {
-            display: flex;
-            gap: 1rem;
-        }
-        nav a {
-            color: white;
-            padding: 0.5rem 0.8rem;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-        section {
-            padding: 5rem 2rem 2rem;
-            text-align: center;
-        }
-        #about img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-        .project-card {
-            display: inline-block;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 300px;
-            margin: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .project-card img {
-            width: 100%;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-        .project-card .card-content {
-            padding: 1rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav .links {
-                flex-direction: column;
-                width: 100%;
-            }
-            nav a {
-                padding: 0.5rem;
-                text-align: left;
-                width: 100%;
-            }
-            .project-card {
-                width: 90%;
-                margin: 1rem auto;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="left-text">Hafidh's Website</div>
-        <div class="links">
-            <a href="#home" style="margin-right: auto;">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand" id="home">
+        <a href=""><span>Hafidh</span> Ghazy</a>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Project</a></li>
+        <li><a href="kesimpulan.html">Kesimpulan</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
-    <section id="home">
-        <h2>Home</h2>
-        <p>Hi there! I'm Hafidh Ghazy Putra Fiadi, an aspiring programmer. Welcome to my personal space on the web!</p>
-    </section>
-    <section id="about">
-        <h2>About</h2>
-        <img src="your-photo.jpg" alt="Hafidh's Photo">
-        <p>I am a 17-year-old student from Surabaya, passionate about coding and solving complex problems. I aim to make a difference in the tech world through my skills.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <div class="card-content">
-                <h3>Project 1</h3>
-                <p>A description of my amazing project.</p>
-                <a href="https://project1-link.com" target="_blank">View Project</a>
-            </div>
+
+    <div id="home" class="home-container">
+      <div class="home-image">
+        <img src="image/ktp.jpg" alt="Hafidh's Image" />
+      </div>
+      <div class="home-text">
+        <h1>Hello !</h1>
+        <p>
+          I am <span>Junior Frontend Engineer</span>, passionate about coding
+          and solving
+        </p>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm Hafidh Ghazy Putra Fiadi, a student from SMK Telkom Sidoarjo,
+          majoring in Telecommunication Access Network Engineering with a focus
+          on the Digital Talent Program Hacker. I'm passionate about programming
+          and aspire to become a Front-End Engineer. My goal is to dive deeper
+          into the world of web development and build skills that will help me
+          create impactful, user-friendly websites.
+        </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="image/Bali.png" alt="Hafidh's Photo" class="about-image" />
+      </div>
+    </div>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" />
+        <div class="card-content">
+          <h3>Project 1</h3>
+          <p>A description of my amazing project.</p>
+          <a href="https://project1-link.com" target="_blank">View Project</a>
         </div>
-        <div class="project-card">
-            <img src="project2.jpg" alt="Project 2">
-            <div class="card-content">
-                <h3>Project 2</h3>
-                <p>A description of another awesome project.</p>
-                <a href="https://project2-link.com" target="_blank">View Project</a>
-            </div>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" />
+        <div class="card-content">
+          <h3>Project 2</h3>
+          <p>A description of another awesome project.</p>
+          <a href="https://project2-link.com" target="_blank">View Project</a>
         </div>
+      </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me:</p>
-        <p>Email: <a href="mailto:hafidh@example.com">hafidh@example.com</a></p>
-        <p>Phone: +62 812 3456 7890</p>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me:</p>
+      <p>Email: <a href="mailto:hafidh@example.com">hafidh@example.com</a></p>
+      <p>Phone: +62 812 3456 7890</p>
     </section>
-</body>
+  </body>
+  <script src="main.js"></script>
 </html>
