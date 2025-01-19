@@ -382,6 +382,7 @@ header {
   }
   .home-text {
     font-size: 18px;
+    margin: 0;
   }
 }
 
@@ -397,7 +398,8 @@ header {
 
   .home-text {
     font-size: 12px;
-  }
+    margin: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -465,14 +467,12 @@ header {
 
   .home-text {
     color: white;
-    margin-top: -2rem;
-    max-width: 760px;
     font-size: 15px;
+    margin: 0;
   }
 
   .home-text p {
     text-align: justify;
-    margin-left: 6px;
     width: 100%;
   }
 
@@ -482,7 +482,6 @@ header {
 
   .home-text h1 {
     font-size: 35px;
-    margin-left: 6px;
   }
 
   .about {
