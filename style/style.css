@@ -36,6 +36,7 @@ header {
 .navbar-brand {
   font-size: 1.5em;
   margin-right: auto;
+  --animate-delay: 0.2s;
 }
 
 .navbar-brand span {
@@ -69,10 +70,6 @@ header {
   transition: color 0.4s ease-in-out;
 }
 
-.navbar-links a:hover {
-  color: #00ff37;
-}
-
 .navbar-links a::after {
   content: "";
   position: absolute;
@@ -90,19 +87,6 @@ header {
   height: 2px;
   opacity: 1;
   transition: 0.3s ease;
-}
-
-.contact-link {
-  margin-left: auto;
-}
-
-.contact-link a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  display: inline-block;
-  position: relative;
-  transition: color 0.4s ease-in-out;
 }
 
 .contact-link a:hover {
@@ -145,10 +129,14 @@ header {
   background-size: cover;
 }
 
+.home-image {
+  --animate-delay: 0.8s;
+}
+
 .home-image img {
-  width: 250px;
-  height: 300px;
-  border-radius: 100px;
+  width: 350px;
+  height: 400px;
+  border-radius: 50px;
   object-fit: cover;
   border: 2px solid #ddd;
   box-shadow: #ffffff 0px 0px 25px;
@@ -161,15 +149,20 @@ header {
   margin-left: 1rem;
   max-width: 760px;
   font-size: 20px;
-  text-justify: inter-character;
+  text-align: justify;
+  --animate-delay: 0.4s;
 }
 
 .home-text span {
   color: #00ff37;
 }
 
+.home-text p {
+  font-size: 2em;
+}
+
 .home-text h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
 }
 
 #about {
@@ -332,13 +325,13 @@ header {
 }
 
 .contact {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .contact h1 {
   color: #00ff37;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 7rem;
   margin-bottom: 12px;
   font-size: 2.5em;
 }
@@ -349,7 +342,7 @@ header {
   align-items: center;
   margin-top: 1rem;
   gap: 40px;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .logo-container a {
@@ -378,6 +371,35 @@ header {
   color: #229ed9;
 }
 
+@media (max-width: 1135px) {
+  .home-image img {
+    width: 325px;
+    height: 375px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    box-shadow: #ffffff 0px 0px 25px;
+  }
+  .home-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 990px) {
+  .home-image img {
+    width: 275px;
+    height: 325px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    box-shadow: #ffffff 0px 0px 25px;
+  }
+
+  .home-text {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
@@ -396,9 +418,9 @@ header {
   }
 
   .navbar-brand {
-  font-size: 1.3em;
-  margin-right: auto;
-}
+    font-size: 1.3em;
+    margin-right: auto;
+  }
 
   .navbar-links.active {
     display: flex;
@@ -432,19 +454,20 @@ header {
   }
 
   .home-image img {
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 275px;
     border-radius: 50px;
     object-fit: cover;
     border: 2px solid #ddd;
     box-shadow: #ffffff 0px 0px 30px;
+    margin-bottom: 2.4rem;
   }
 
   .home-text {
     color: white;
     margin-top: -2rem;
     max-width: 760px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .home-text p {
@@ -463,32 +486,32 @@ header {
   }
 
   .about {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center align content */
-    padding: 13px; /* Reduce padding for smaller screens */
-    text-align: center; /* Center text for better mobile readability */
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+    text-align: center;
     margin-bottom: 5em;
   }
 
   .about-text {
-    margin-left: 0; /* Remove margin to fit narrow screen */
+    margin-left: 0;
   }
 
   .about-image {
-    width: 200px; /* Adjust image size */
-    height: 200px; /* Adjust image size */
-    margin: 0 auto; /* Center image */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
   }
 
   .about h2 {
-    font-size: 1.7em; /* Adjust heading size */
+    font-size: 1.7em;
     margin-bottom: 1.5rem;
   }
 
   .about p {
-    width: 100%; /* Make paragraph take full width */
+    width: 100%;
     margin-top: 1.5rem;
-    font-size: 15px; /* Smaller font size for mobile readability */
+    font-size: 15px;
     line-height: 1.4;
     text-align: justify;
     padding: 10px;
@@ -526,5 +549,14 @@ header {
 
   .logo-container a {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-text {
+    color: white;
+    margin-top: -2rem;
+    max-width: 760px;
+    font-size: 12px;
   }
 }
